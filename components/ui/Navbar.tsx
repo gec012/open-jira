@@ -1,10 +1,12 @@
 import { IconButton } from "@mui/material"
 import { Toolbar } from "@mui/material"
-import { AppBar } from "@mui/material"
+import { AppBar, Link } from "@mui/material"
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import { Typography } from "@mui/material";
 import { useContext } from 'react';
 import { UIContext } from "@/context/ui";
+import NextLink from "next/link";
+
 
 
 
@@ -23,7 +25,16 @@ export const Navbar = () => {
             >
                 <MenuRoundedIcon/>
             </IconButton>
-            <Typography variant="h6">OpenJira</Typography>
+            <NextLink href="/" passHref legacyBehavior >
+              <Link 
+              underline="none"
+              color='white'
+              >
+              <Typography variant="h6">OpenJira</Typography>
+              </Link>
+            
+            </NextLink>
+            
         </Toolbar>
     </AppBar>
   )
